@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EACV,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,cAAc;CACzB;;AAED,AAAA,QAAQ,CAAA;EACJ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,KAAK;CAKzB;;AATD,AAMI,QANI,CAMJ,KAAK,CAAA;EACD,KAAK,EAAE,WAAW;CACrB",
+    "sources": [
+        "MakePrediction.module.scss"
+    ],
+    "names": [],
+    "file": "MakePrediction.module.css"
+}
