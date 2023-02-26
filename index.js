@@ -8,16 +8,27 @@ const matchRoutes = require("./routes/matchRoute");
 const teamRoutes = require("./routes/teamRoute");
 const predictionRoutes = require("./routes/predictionRoute");
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 const dbUrl = process.env.MONGODB_URI;
 
 app.use(express.json());
 app.use(cors());
 
-app.use(authRoutes);
-app.use(matchRoutes);
-app.use(teamRoutes);
-app.use(predictionRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/match", matchRoutes);
+app.use("/api/team", teamRoutes);
+app.use("/api/prediction", predictionRoutes);
+
+app.use((error, req, res, next) => {
+  const status = error.statusCode || 500;
+  const message = error.message || "Something went wrong!";
+  const errorData = error.data;
+
+  res.status(status).json({
+    message: message,
+    errorData: errorData,
+  });
+});
 
 mongoose
   .connect(dbUrl, {

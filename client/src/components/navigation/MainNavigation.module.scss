@@ -1,21 +1,32 @@
-$navbarBackgroundColor : #2b447d; 
-$hoverLinkColor : #79bee1;
+$navbarBackgroundColor: #474e93;
+$hoverLinkColor: #aad0e8;
 
-.navbar{    
-    background-color : $navbarBackgroundColor !important
+.navbar {
+  background-color: $navbarBackgroundColor !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+
+  @media screen and (max-width: 991px) {
+    gap: 1rem;
+  }
 }
 
-.link{
-    text-decoration: none;
-    color: white;
-    margin-left: 1rem;
-    margin-right: 1rem;
+.link {
+  text-decoration: none;
+  color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
 
-    &:hover{
-        color: $hoverLinkColor
-    }
+  &:hover {
+    color: $hoverLinkColor;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
-.isLinkActive{
-    color:#27ac61;
+.isLinkActive {
+  color: #34dc4a;
 }
